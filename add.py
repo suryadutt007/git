@@ -1,4 +1,5 @@
-c=input('''press one number 
+
+d=input('''press one number 
 1 for add ,
 2 for subtract, 
 3 for multiply, 
@@ -6,18 +7,26 @@ c=input('''press one number
  ''')
 a=int(input("\n\n press enter first number"))
 b=int(input("\n\n press enter second number"))
-if c == '1':
-     print(a+b)
-	 
-elif c == '2':
-   print(a-b)
-   
-elif c == '3':
-    print(a*b)
-	
-elif c == '4':
-    print(a/b)
-	
+fp=open("D:\\New folder\\op.txt","a+")
+fp.write("%s:"%d)
+if d == '1':
+  c=a+b
+  print (c)
+  fp.write("%s:"%c)  
+elif d == '2':
+  c=a-b
+  print (c) 
+  fp.write("%s:"%c)
+elif d == '3':
+  c=a*b
+  print (c)
+  fp.write("%s:"%c)
+elif d == '4':
+  c=a/b
+  print (c)
+  fp.write("%s:"%c)
 else:
-    print("ok")
+  print("invalid input")
+fp.write("\n\n")
+fp.close
 	
